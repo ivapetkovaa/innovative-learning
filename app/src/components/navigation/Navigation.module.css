@@ -1,0 +1,208 @@
+.nav-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  flex-direction: row;
+  width: 100vw;
+  height: 6vw;
+  background-color: transparent;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  margin: auto;
+}
+.logo {
+  width: 10vw;
+}
+.logo img {
+  width: 4.1vw;
+  cursor: pointer;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #152c70;
+  width: 80vw;
+  box-shadow: 0px 10px 10px #152c7086;
+  background-color: rgba(255, 255, 255, 0.275);
+}
+
+.link {
+  transition: all 0.3s;
+  display: inline-block;
+  margin: 0 2vw;
+  cursor: pointer;
+  position: relative;
+  font-size: 2vw;
+  padding: 0px 1vw;
+  border-top-right-radius: 0.5vw;
+  border-bottom-left-radius: 0.5vw;
+  margin: 0 4vw;
+  font-weight: 900;
+  font-family: "Cormorant Garamond";
+  opacity: 0.85;
+}
+
+.link::after,
+.link::before {
+  content: " ";
+  width: 0.5vw;
+  height: 0.5vw;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 0.3s;
+}
+
+.link::after {
+  top: 0vw;
+  left: 0vw;
+  border-top: 0.2vw solid #152c70;
+  border-left: 0.2vw solid #152c70;
+}
+
+.link::before {
+  bottom: 0vw;
+  right: 0vw;
+  border-bottom: 0.2vw solid #152c70;
+  border-right: 0.2vw solid #152c70;
+}
+
+.link:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.link:hover::before,
+.link:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #152c70;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 7.5vw;
+}
+
+.profile {
+  height: 4.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-active {
+  background-color: #152c70;
+  border-top-right-radius: 8px;
+}
+
+.profile-active > ul > li:first-child {
+  margin-top: 0.9vw;
+}
+
+.profile img {
+  width: 3.65vw;
+  height: 3.65vw;
+  object-fit: fill; /* This will crop the image to fill the container */
+  object-position: center;
+  padding: 0px 2.08vw;
+  border-radius: 50%;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #152c70;
+  padding: 0;
+  list-style: none;
+  margin-top: 11.8vw;
+  width: 7.8vw;
+  text-align: center;
+  box-shadow: 0px 6px 10px #152c7086;
+}
+
+.list-item {
+  cursor: pointer;
+  padding: 0.4vw 1vw;
+  font-size: 1vw;
+  font-family: "Cormorant Garamond";
+  font-weight: 900;
+  color: white;
+  border-top: 1px solid white;
+  white-space: nowrap;
+  transition: 0.5s ease;
+}
+
+.list-item:hover {
+  background-color: yellow;
+  color: rgb(0, 68, 68);
+}
+
+.search {
+  display: flex;
+  position: relative;
+  right: 8vw;
+  transform: translate("-50%", "-50%");
+  border-radius: 8px;
+}
+
+.search-profile {
+  position: static;
+  margin-right: 1.5vw;
+}
+
+.search:hover > input {
+  width: 11vw;
+  padding: 0 0.5vw;
+}
+
+.search img {
+  margin: auto;
+  width: 1.3vw;
+  float: right;
+  transition: 0.4s;
+}
+
+.search:hover {
+  background-color: yellow;
+}
+
+.search:hover > img {
+  transform: rotate(360deg) scale(0.8);
+}
+.search-input {
+  width: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 1vw;
+  transition: 0.5s ease;
+  line-height: 2.1vw;
+}
+
+.search-dropdown {
+  width: 12vw;
+  margin-top: 2vw;
+}
+
+.search-dropdown > li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-search {
+  right: 9vw;
+}

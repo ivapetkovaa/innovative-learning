@@ -1,0 +1,153 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(159, 202, 245, 1) 0%,
+    rgba(207, 230, 252, 1) 16%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(155, 200, 245, 1) 84%,
+    rgba(87, 162, 238, 1) 100%
+  );
+  margin-top: -0.2vw;
+  font-family: "Cormorant Garamond";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+}
+.title {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+}
+
+.title > h1 {
+  text-align: center;
+  width: 40vw;
+  padding: 0;
+  padding-bottom: 0.5vw;
+  color: white;
+  font-size: 2.1vw;
+  border-bottom: 2px solid #152c70;
+  text-shadow: #152c70 1px 0 5px;
+}
+
+.categories {
+  width: 90vw;
+  height: 50vh;
+  margin-top: -3vw;
+  display: flex;
+}
+
+.footer {
+  height: 20vh;
+  width: 50vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+
+  background-color: #152c70f5;
+  box-shadow: 0px -5px 9px #06133a86;
+  transform: translateY(70%);
+  transition: 0.3s linear;
+}
+
+.footer:hover {
+  transform: translateY(0%);
+}
+
+.footer > p {
+  margin: 0;
+  margin-left: 5vw;
+  font-size: 1vw;
+  white-space: nowrap;
+  text-shadow: black 1px 0 5px;
+}
+
+.contacts {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  margin: 0 auto;
+}
+
+.contacts > h3 {
+  color: white;
+  font-size: 2.1vw;
+  border-bottom: 2px solid white;
+  margin: 0;
+  margin-bottom: 1vw;
+  width: 10vw;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.4vw;
+  text-shadow: #091129 1px 0 5px;
+  color: yellow;
+}
+
+.info > p {
+  white-space: nowrap;
+  margin: 0 0.5vw;
+  font-size: 1.3vw;
+}
+
+.info > img {
+  width: 1vw;
+}
+
+.icons {
+  display: flex;
+  margin-right: 4vw;
+}
+
+.icons img {
+  width: 2vw;
+  margin: 0 0.5vw;
+}
+
+.icons-container {
+  width: 100vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 2vw;
+  margin-top: -5.5vw;
+}
+
+.icons-container .up > img {
+  width: 2vw;
+  animation: moveArrowUp 3s infinite;
+  transition: ease-in;
+}
+
+@keyframes moveArrowUp {
+  0% {
+    transform: translateY(-1vw);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1vw);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1vw);
+  }
+}

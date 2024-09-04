@@ -1,0 +1,193 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(159, 202, 245, 1) 0%,
+    rgba(207, 230, 252, 1) 16%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(155, 200, 245, 1) 84%,
+    rgba(87, 162, 238, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw 2vw;
+}
+
+.navigation a {
+  background-color: #081438ed;
+  color: white;
+  font-size: 1.3vw;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px white;
+  padding: 0.5vw 1vw;
+}
+
+.navigation a:hover {
+  background-color: rgb(251, 251, 124);
+  color: #081438ed;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.navigation h1 {
+  font-size: 3vw;
+  padding: 0.2vw 1vw;
+  background-color: rgb(240, 230, 230);
+  box-shadow: 0px 0px 10px #081438ed;
+  border-radius: 8px;
+  text-shadow: #f6f6b0 3px 0 1px;
+  margin-right: 5vw;
+  color: #081438ed;
+}
+
+.quiz-body {
+  max-width: 60vw;
+  background-color: rgb(240, 230, 230);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #081438ed;
+  padding: 0.5vw 2vw;
+}
+
+.quiz-body::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header h3 {
+  font-family: "monospace";
+  font-size: 1.5vw;
+  margin-top: 0.5vw;
+  width: fit-content;
+  background-color: white;
+  box-shadow: 0px 0px 10px #081438ed;
+  padding: 0.3vw 0.5vw;
+  border-radius: 8px;
+}
+
+.li:not(:first-child):not(:last-child) {
+  border-radius: 8em;
+}
+
+.li:first-child,
+.li:last-child {
+  background-color: #081438ed;
+  color: white;
+}
+
+.quiz-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-right: 5vw;
+}
+
+.quiz-card h2 {
+  font-size: 2vw;
+  font-family: "Times New Roman", Times, serif;
+  width: fit-content;
+  background-color: rgb(246, 246, 164);
+  padding: 0.6vw 0.7vw;
+  box-shadow: inset 3px 3px 2px #081438ed, inset -3px -3px 2px #081438ed;
+  border-radius: 8em;
+  text-align: center;
+}
+
+.ul {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.li {
+  border: 3px solid #081438ed;
+  font-size: 1.6vw;
+  border-radius: 8em;
+  padding: 0.5vw 2vw;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.3vw;
+  background-color: #081438ed;
+  color: white;
+  margin-right: 3vw;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+
+.li:not(:first-child):not(:last-child) {
+  border-radius: 20px;
+}
+
+.quiz-card ul li:not(:first-child):not(:last-child):hover {
+  background-color: rgb(242, 242, 169);
+  color: #081438ed;
+}
+
+.quiz-card ul li:hover {
+  background-color: rgb(242, 242, 169);
+  color: #081438ed;
+}
+
+.final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-right: 5vw;
+}
+
+.final button {
+  background-color: red;
+  color: white;
+  font-size: 1.5vw;
+  border-radius: 8em;
+  padding: 0.3vw 0.7vw;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+  border: 2px solid gray;
+  text-align: center;
+  cursor: pointer;
+}
+
+.final button:hover {
+  background-color: #081438ed;
+}
+
+.final h1 {
+  font-size: 2vw;
+  font-family: "Times New Roman", Times, serif;
+  width: fit-content;
+  background-color: rgb(246, 246, 164);
+  padding: 0.6vw 0.7vw;
+  box-shadow: inset 3px 3px 2px #081438ed, inset -3px -3px 2px #081438ed;
+  border-radius: 8em;
+  text-align: center;
+}
+.final h2 {
+  background-color: #081438ed;
+  color: white;
+  padding: 0.6vw 0.7vw;
+  font-size: 1.8vw;
+  border-radius: 8em;
+}

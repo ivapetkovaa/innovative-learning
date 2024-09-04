@@ -1,0 +1,160 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(159, 202, 245, 1) 0%,
+    rgba(207, 230, 252, 1) 16%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(155, 200, 245, 1) 84%,
+    rgba(87, 162, 238, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  margin-top: 10vw;
+  background: white;
+  width: 60vw;
+  height: 35vw;
+  box-shadow: 0px 0px 10px black, inset 3px 3px 5px rgba(1, 42, 249, 0.557),
+    inset -3px -3px 5px rgba(1, 42, 249, 0.557);
+  border-radius: 8px;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.image-container {
+  width: 18vw;
+  height: 18vw;
+  background: linear-gradient(
+    0deg,
+    #152c70 0%,
+    #3259cf 18%,
+    rgb(252, 252, 251) 49%,
+    #3259cf 75%,
+    #152c70 100%
+  );
+  margin-left: 3vw;
+  margin-right: 3vw;
+  box-shadow: 0px 15px 20px gray;
+  transition: background 2s linear;
+}
+
+.image-container:hover {
+  background: linear-gradient(
+    0deg,
+    #152c70 0%,
+    #152c70 18%,
+    #3259cf 49%,
+    #152c70 75%,
+    #152c70 100%
+  );
+}
+
+.image-container:hover > img {
+  border-radius: 50%;
+  border: 2px solid rgba(249, 249, 5, 0.585);
+  background-color: rgba(242, 242, 145, 0.136);
+  width: 100%;
+  height: 100%;
+}
+.image-container > img {
+  object-fit: contain; /* This will crop the image to fill the container */
+  object-position: center;
+  transition: 0.2s linear;
+}
+
+.manage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17vw;
+  margin-left: 3vw;
+  margin-top: 3vw;
+  border-right: 3px solid #152c70;
+  border-left: 3px solid #152c70;
+  padding-top: 1vw;
+  border-radius: 8em;
+  transition: border 0.2s ease;
+}
+
+.manage:hover {
+  border: 3px solid yellow;
+  background-color: rgba(242, 242, 145, 0.285);
+}
+
+.manage > a {
+  background-color: #152c70;
+  padding: 0.8vw 0;
+  font-size: 1.2vw;
+  margin-bottom: 2vw;
+  color: white;
+  width: 12vw;
+  text-align: center;
+  border-radius: 8em;
+  box-shadow: 0px 0px 5px rgba(1, 42, 249, 0.557);
+  font-weight: 500;
+}
+
+.manage > a:hover {
+  background-color: rgb(243, 243, 134);
+  color: #3259cf;
+  font-weight: 600;
+  border: 3px solid #3259cf;
+}
+
+.info {
+  background-color: #152c70;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 80%;
+  font-family: "Cormorant Garamond";
+  font-weight: 700;
+  box-shadow: -5px 0px 5px rgb(239, 239, 89);
+}
+
+.info h1 {
+  font-size: 2.5vw;
+  color: rgb(239, 239, 89);
+  box-shadow: inset 3px 3px 10px rgb(176, 173, 173);
+  padding: 0.5vw 0.8vw;
+  text-shadow: #000 1px 0 5px;
+}
+
+.field {
+  margin-bottom: 1vw;
+  padding: 1vw 0.8vw;
+  text-align: center;
+  background-color: white;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8em;
+  border: 2px solid rgb(239, 239, 89);
+}
+
+.field p {
+  margin: 0 auto;
+  font-size: 1.3vw;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.field:hover {
+  background-color: rgb(239, 239, 89);
+  border: 3px solid white;
+}

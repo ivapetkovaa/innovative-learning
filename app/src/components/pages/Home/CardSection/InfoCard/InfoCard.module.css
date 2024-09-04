@@ -1,0 +1,42 @@
+.card {
+    text-align: center;
+    background-color: rgb(178, 214, 250);
+    margin: 0 auto;
+    box-shadow: 0px 6px 10px #152c7086;
+    width: 20vw;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+}
+
+.card:hover > h3 {
+    color: yellow;
+    transition: 0.2s ease-in;
+    text-shadow: #152C70 1px 0 5px;
+}
+
+.icon-container {
+    margin-top: 1vw;
+}
+
+.icon-container img {
+    width: 3.5vw;
+}
+
+h3 {
+    font-size: 1.2vw;
+    font-family: "Cormorant Garamond";
+    margin-top: 0;
+    font-weight: 900;
+    color: #152C70;
+}
+
+p {
+    width: 80%;
+    margin: auto;
+    font-size: 1vw;
+    font-family: "Cormorant Garamond";
+    font-weight: 900;
+}

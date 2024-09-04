@@ -1,0 +1,253 @@
+.page-container {
+  font-family: "Montserrat";
+  background: linear-gradient(
+    0deg,
+    rgba(159, 202, 245, 1) 0%,
+    rgba(207, 230, 252, 1) 16%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(155, 200, 245, 1) 84%,
+    rgba(87, 162, 238, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  width: 1.5vw;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px #06133a86;
+  position: relative;
+  overflow: hidden;
+  width: 70vw;
+  max-width: 90vw;
+  min-height: 85vh;
+  margin-left: 1.5vw;
+  margin-top: 5vw;
+  transition: 0.6s ease-in-out;
+}
+
+.container p {
+  font-size: 1.3vw;
+  line-height: 2vw;
+  letter-spacing: 0.1vw;
+  margin: 20px 0;
+  text-shadow: #0b1639 1px 0 5px;
+  color: yellow;
+}
+
+.container span {
+  font-size: 1vw;
+}
+
+.container a {
+  color: #333;
+  font-size: 0.9vw;
+  margin: 1vw 0 0.5vw;
+}
+
+.container button {
+  background-color: #152c70;
+  color: white;
+  font-size: 0.9vw;
+  padding: 0.5vw 2.1vw;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
+  margin-top: 0.5vw;
+  cursor: pointer;
+}
+
+
+.container button:hover {
+  background-color: rgba(255, 255, 0, 0.81);
+  color:#152c70;
+}
+
+.container button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.container button.hidden:hover {
+  background-color: rgba(255, 255, 0, 0.81);
+  color:#152c70;
+}
+
+.container form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 2vw;
+}
+
+.container form > h1 {
+  color: #152c70;
+  font-size: 2.1vw;
+}
+.container input {
+  background-color: #eee;
+  border: none;
+  margin: 0.5vw 0;
+  padding: 0.9vw 1vw;
+  font-size: 1vw;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+
+.container input:invalid[focused="true"] ~ span {
+  display: block;
+}
+
+.container input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.login {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.container.active > .login {
+  transform: translateX(100%);
+}
+
+.sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+
+@keyframes move {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.social-icons {
+  margin: 1vw 0vw;
+}
+
+.social-icons a {
+  border: 1px solid #070606;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5vw;
+  width: 2.8vw;
+  height: 2.8vw;
+}
+
+.social-icons a:hover {
+  background-color: rgba(244, 244, 242, 0.937);
+  border: 2px solid yellow;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1000;
+  border-radius: 150px 0 0 100px;
+}
+
+.container.active .toggle-container {
+  transform: translateX(-100%);
+  border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+  /* background-color: #152c70; */
+  height: 100%;
+  background: linear-gradient(90deg, rgba(250,5,133,1) 0%, #152c70);
+  color: #fff;
+  position: relative;
+  left: -100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+  background: linear-gradient(90deg,rgba(250,5,133,1) 0%, rgba(21,44,112,1) 100%);
+  transform: translateX(50%);
+}
+
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  top: 0;
+  padding: 0 1.5vw;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+  transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+  transform: translateX(0);
+}
+
+.toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.active .toggle-right {
+  transform: translateX(200%);
+}
+
+.toggle-container h1 {
+  font-size: 2.3vw;
+  text-shadow: #0b1639 1px 0 5px;
+
+}

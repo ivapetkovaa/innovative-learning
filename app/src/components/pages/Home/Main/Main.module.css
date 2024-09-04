@@ -1,0 +1,180 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  position: static;
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+  color: white;
+  font-family: "Cormorant Garamond";
+  z-index: 999;
+}
+
+.header-i {
+  background-color: rgb(0, 68, 68);
+  padding: 1vw;
+  font-size: 3.7vw;
+  position: relative;
+  left: -5vw;
+  top: 0;
+  animation: fromLeft 1.5s ease-in, lightItUp 15s 2s infinite;
+  box-shadow: 0px 6px 10px #152c7086;
+}
+
+.header-l {
+  background-color: rgb(41, 205, 205);
+  padding: 1vw;
+  font-size: 3.7vw;
+  top: -4.7vw;
+  position: relative;
+  left: 5vw;
+  color: rgb(0, 68, 68);
+  animation: fromRight 1.5s ease-in;
+  box-shadow: 0px 6px 10px #152c7086;
+}
+
+.button {
+  cursor: pointer;
+  position: relative;
+  padding: 0.5vw 1.5vw;
+  border: none;
+  font-size: 1.3vw;
+  box-shadow: 0px 6px 10px #152c7086;
+  font-family: "Cormorant Garamond";
+  font-weight: 900;
+}
+
+.sign-up:hover {
+  background-color: yellow;
+}
+
+.log-in:hover {
+  background-color: #152c70;
+}
+
+.sign-up {
+  background-color: rgb(41, 205, 205);
+  color: rgb(0, 68, 68);
+  left: 9vw;
+  top: 5vw;
+  animation: fromRight 1.5s ease-in;
+  transition: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.log-in {
+  background-color: rgb(0, 68, 68);
+  color: white;
+  left: -10.5vw;
+  top: -10vw;
+  animation: fromLeft 1.5s ease-in;
+  animation-fill-mode: forwards;
+  transition: 0.3s;
+}
+
+.video-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.video {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+
+  /* Additional styles */
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures video covers the entire container */
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-15vw);
+  }
+  80% {
+    opacity: 0.7;
+    transform: translate(-1vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translate(12.1vw);
+  }
+  80% {
+    opacity: 0.7;
+    transform: translate(1vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes lightItUp {
+  0% {
+    background-color: rgb(0, 68, 68);
+    color: white;
+  }
+  25% {
+    background-color: yellow;
+    color: rgb(0, 68, 68);
+  }
+  80% {
+    background-color: rgb(0, 68, 68);
+    color: white;
+  }
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: -2.1vw;
+  margin-right: 2vw;
+}
+
+.arrow a > img {
+  width: 2vw;
+  animation: moveArrow 3s infinite;
+  transition: ease-in;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1vw);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-1vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

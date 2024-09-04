@@ -1,0 +1,31 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(159, 202, 245, 1) 0%,
+    rgba(207, 230, 252, 1) 16%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(155, 200, 245, 1) 84%,
+    rgba(87, 162, 238, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.change {
+  font-size: 1.1vw;
+  border-radius: 8px;
+  color: white;
+  background-color: #152c70;
+  padding: 0.5vw 1vw;
+  cursor: pointer;
+  position: fixed;
+  top: 8vw;
+}
+
+.change:hover {
+  background-color: rgb(7, 248, 7);
+}

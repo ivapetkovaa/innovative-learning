@@ -1,0 +1,150 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(159, 202, 245, 1) 0%,
+    rgba(207, 230, 252, 1) 16%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(155, 200, 245, 1) 84%,
+    rgba(87, 162, 238, 1) 100%
+  );
+  margin-top: 0vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+}
+
+.cards {
+  display: flex;
+  margin-bottom: 3vw;
+  width: 90vw;
+  height: 30vh;
+}
+
+.information {
+  width: 80vw;
+  height: 45vh;
+  margin-top: 7vw;
+  display: flex;
+}
+
+.image-container {
+  width: 40.2vw;
+  background-image: url("../../../assets/e-learn-d.webp");
+  background-size: cover;
+  background-position: 80%;
+  box-shadow: 0px 6px 10px #152c7086;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4vw;
+  box-shadow: 0px 6px 10px #152c7086;
+  border-left: none;
+  font-family: "Cormorant Garamond";
+  background-color: rgba(255, 255, 255, 0.457);
+}
+
+.description > h1 {
+  color: #152c70;
+  font-family: 900;
+  font-size: 2.5vw;
+  margin: 0 auto;
+  margin-bottom: 1vw;
+}
+
+.text {
+  width: 30vw;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 1.2vw;
+  text-align: justify;
+}
+
+.about-container {
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+  padding-left: 0;
+  margin-left: -4.5vw;
+  margin-top: 0.5vw;
+  font-weight: 900;
+}
+
+.about-container > img {
+  width: 3vw;
+}
+
+.about {
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+.about:hover {
+  color: yellow;
+  text-shadow: #152c70 1px 0 5px;
+}
+
+.icons-container {
+  width: 100vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 2vw;
+  margin-top: -3.5vw;
+}
+
+.icons-container .down > img {
+  width: 2vw;
+  animation: moveArrowDown 3s infinite;
+  transition: ease-in;
+}
+
+.icons-container .up > img {
+  width: 2vw;
+  animation: moveArrowUp 3s infinite;
+  transition: ease-in;
+}
+
+@keyframes moveArrowDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1vw);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-1vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveArrowUp {
+  0% {
+    transform: translateY(-1vw);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1vw);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1vw);
+  }
+}
